@@ -1,0 +1,72 @@
+.component
+    max-width: 340px
+    padding: 15px
+    border-radius: 10px
+    text-decoration-line: none
+    position: relative
+    top: 0
+    transition: top ease 0.3s
+
+    &:hover
+        top: -2px
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25)
+
+.image
+    border-radius: 10px
+    background-color: lightgray 50%
+    background-repeat: no-repeat
+    object-fit: cover
+    
+.title
+    color: #850000
+    font-style: normal
+    font-weight: 600
+    font-size: 24px
+    line-height: 30px
+    margin-bottom: 17px
+
+.tagLayout
+    display: flex
+    margin-bottom: 16px
+
+.tag
+    font-style: normal
+    font-weight: 700
+    font-size: 14px
+    display: flex
+    align-items: center
+    text-align: center
+    letter-spacing: 1px
+    color: #F60
+    background: rgba(255, 102, 0, 0.08)
+    border-radius: 16px
+    padding: 6px 12px
+    margin-right: 15px
+
+    &:last-child
+        margin-right: 0
+        margin-left: auto
+        @media(max-width:860px)
+            display: none
+
+    
+.description
+    font-family: Advent Pro, monospace
+    text-align: justify
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 24px
+    color: #850000
+
+.data
+    color: rgba(0, 0, 0, 0.60)
+    font-size: 14px
+    font-style: normal
+    font-weight: 600
+    line-height: 60px
+    letter-spacing: 1px
+    text-transform: uppercase
+    display: none
+    @media(max-width:860px)
+        display: block

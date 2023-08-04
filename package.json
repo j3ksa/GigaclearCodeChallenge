@@ -1,0 +1,51 @@
+{
+  "name": "gigaclear-frontend-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^7.2.0",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.2.1",
+    "@storybook/nextjs": "^7.2.1",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^7.2.0",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.2",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.2",
+    "eslint-plugin-storybook": "^0.6.13",
+    "jsdom": "^22.1.0",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "storybook": "^7.2.1",
+    "style-loader": "^3.3.1",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "vitest": "^0.34.1"
+  }
+}

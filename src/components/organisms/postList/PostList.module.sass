@@ -1,0 +1,23 @@
+.home
+    margin-bottom: 40px
+    
+.title
+    color: #F60
+    font-size: 64px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    @media(max-width:860px)
+        font-size: 32px
+        text-align: center
+
+.list
+    display: grid 
+    max-width: 1180px
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(344px, 1180px/3)), 1fr))
+    row-gap: 40px
+    @media(max-width:1480px)
+        justify-items: center
+        row-gap: 51px
+    
+

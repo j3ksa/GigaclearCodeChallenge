@@ -1,0 +1,60 @@
+{
+    "homeTitle": "Check our latest Posts",
+    "posts": [
+        {
+            "id": "1",
+            "image": "https://i.ibb.co/r5Wsp79/post1.jpg",
+            "title": "Case Study",
+            "tags": [
+                "topic",
+                "user"
+            ],
+            "timestamp": "1628726400",
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+        },
+        {
+            "id": "2",
+            "image": "https://i.ibb.co/3d9VYy3/post2.jpg",
+            "title": "Case Study",
+            "tags": [
+                "topic",
+                "user"
+            ],
+            "timestamp": "1618617600",
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+        },
+        {
+            "id": "3",
+            "image": "https://i.ibb.co/JkW68SV/post3.jpg",
+            "title": "Case Study",
+            "tags": [
+                "topic",
+                "user"
+            ],
+            "timestamp": "1640112300",
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+        },
+        {
+            "id": "4",
+            "image": "https://i.ibb.co/TYvkjj3/post4.jpg",
+            "title": "Case Study",
+            "tags": [
+                "topic",
+                "user"
+            ],
+            "timestamp": "1635867000",
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+        },
+        {
+            "id": "5",
+            "image": "https://i.ibb.co/thXmHv0/post5.jpg",
+            "title": "Case Study",
+            "tags": [
+                "topic",
+                "user"
+            ],
+            "timestamp": "1624982400",
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+        }
+    ]
+}
