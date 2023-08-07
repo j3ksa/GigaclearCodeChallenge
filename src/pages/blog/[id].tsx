@@ -1,32 +1,38 @@
 import { Layout } from 'src/components/layout';
-import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { Post } from "src/types";
 import { BlogPost } from 'src/components/organisms';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import useSWR, { Fetcher } from 'swr';
+import { Loading } from "@/atoms/loading/Loading";
 
-export default function Blog({
-  repo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-    const { query } = useRouter()
-    const blogId = Number(query.id)
+interface PostData {
+  posts: Post[]
+}
+
+const fetcher: Fetcher<PostData, string> = async (url) => {
+  try {
+    const res = await fetch(url)
+    return res.json()
+  } catch (error) {
+    console.error('res.json returned with error:' + error)
+  }
+}
+
+export default function Blog() {
+  const { query } = useRouter()
+  const blogId = Number(query.id)
+
+  const { data } = useSWR('http://localhost:3000/api/getPostData', fetcher);
+  
+  if (!data) return <Loading/>
 
   return (
     <Layout>
       <Head>
         <title>Blog post</title>
       </Head>
-      <BlogPost data={repo.posts[blogId - 1]}/>
+      <BlogPost data={data.posts[blogId - 1]}/>
     </Layout>
   )
-}
-
-export const getServerSideProps: GetServerSideProps<{
-  repo: {
-    posts: Post[]
-  }
-}> = async () => {
-  const res = await fetch('http://localhost:3000/api/getPostData')
-  const repo = await res.json()
-  return { props: { repo } }
 }

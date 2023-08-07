@@ -1,27 +1,31 @@
 import { Layout } from "../components/layout";
-import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { HomePage } from "src/types";
 import { PostList } from "src/components/organisms";
 import Head from "next/head";
+import useSWR, { Fetcher } from 'swr';
+import { Loading } from "@/atoms/loading/Loading";
 
-export default function Home({
-  repo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+const fetcher: Fetcher<HomePage, string> = async (url) => {
+  try {
+    const res = await fetch(url)
+    return res.json()
+  } catch (error) {
+    console.error('res.json returned with error:' + error)
+  }
+}
+
+export default function Home() {
+
+  const { data } = useSWR('http://localhost:3000/api/getHomePageData', fetcher);
+
+  if (!data) return <Loading/>
 
   return (
     <Layout>
       <Head>
         <title>Gigaclear news</title>
       </Head>
-      <PostList data={repo}/>
+      <PostList data={data}/>
     </Layout>
   )
-}
-
-export const getServerSideProps: GetServerSideProps<{
-  repo: HomePage
-}> = async () => {
-  const res = await fetch('http://localhost:3000/api/getHomePageData')
-  const repo = await res.json()
-  return { props: { repo } }
 }
