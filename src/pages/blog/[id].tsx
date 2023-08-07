@@ -23,7 +23,7 @@ export default function Blog() {
   const { query } = useRouter()
   const blogId = Number(query.id)
 
-  const { data } = useSWR('http://localhost:3000/api/getPostData', fetcher);
+  const { data } = useSWR('/api/getPostData', fetcher);
   
   if (!data) return <Loading/>
 

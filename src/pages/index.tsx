@@ -15,8 +15,7 @@ const fetcher: Fetcher<HomePage, string> = async (url) => {
 }
 
 export default function Home() {
-
-  const { data } = useSWR('http://localhost:3000/api/getHomePageData', fetcher);
+  const { data } = useSWR('/api/getHomePageData', fetcher);
 
   if (!data) return <Loading/>
 
